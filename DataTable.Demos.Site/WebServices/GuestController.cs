@@ -31,7 +31,13 @@ namespace DataTable.Demos.Site.WebServices
                 sEcho = echo,
                 iTotalRecords = guestRepository.CountTotalGuests(),
                 iTotalDisplayRecords = guestRepository.CountWithFilter(globalSearch),
-                aaData = guestRepository.GetGuests(displayLength, displayStart, globalSearch)
+                aaData = guestRepository.GetGuests(displayLength, displayStart, globalSearch).Select(g => new { 
+                    g.Name,
+                    g.MailAddress,
+                    g.Country,
+                    Anniversary = g.Anniversary.ToString("dd/MM/yyyy"),
+                    g.Gender
+                }).ToList()
             };
         }
 

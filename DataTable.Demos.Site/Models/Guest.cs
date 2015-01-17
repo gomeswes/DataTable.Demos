@@ -17,7 +17,11 @@ namespace DataTable.Demos.Site.Models
         public string Name { get; set; }
         public string MailAddress { get; set; }
         public string Country { get; set; }
-        public DateTime Aniversary { get; set; }
+        public DateTime Anniversary
+        { 
+            get; 
+            set; 
+        }
         public string Gender { get; set; }
 
 

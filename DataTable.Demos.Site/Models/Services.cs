@@ -15,7 +15,7 @@ namespace DataTable.Demos.Site.Models.Services
                 var guestName = RandomInfoGenerator.GenerateRandomName(i);
                 var guest = new Guest(guestName, RandomInfoGenerator.GenerateMailAddressFromName(guestName));
                 guest.Country = RandomInfoGenerator.GetRandomCountry(i);
-                guest.Aniversary = RandomInfoGenerator.GenerateRandomDate(guest.Name);
+                guest.Anniversary = RandomInfoGenerator.GenerateRandomDate(guest.Name);
                 guest.Gender = RandomInfoGenerator.GetRandomGender(i);
                 guests.Add(guest);
             }
