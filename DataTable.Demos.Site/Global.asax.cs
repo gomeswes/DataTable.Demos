@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataTable.Demos.Site.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,7 @@ namespace DataTable.Demos.Site
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+            DataCache.CreateGuestsCache();
         }
     }
 }

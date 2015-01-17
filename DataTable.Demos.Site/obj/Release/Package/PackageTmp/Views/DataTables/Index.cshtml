@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Data Table Exemplos";
+}
+
+<h2>Escolha um exemplo</h2>
+
+
+<script type="text/javascript">
+    var namesCrawler = [];
+    namesCrawler.makeNames = function () {
+        var oNames = [];
+        /* To get names from an ol or ul list structure */
+        $(".nameList li").each(function (index, item) {
+            var sFullName = $.trim($(item).html());
+            var sFirstName = $.trim(sFullName.split(' ')[0]);
+            var sSecondName = $.trim(sFullName.split(' ')[1]);
+
+            oNames.push([sFirstName, sSecondName]);
+
+        });
+
+        Global.doAjaxPost('/api/Names', JSON.stringify(oNomes));
+    }
+
+    namesCrawler.makeCountries = function () {
+        var oCountries = [];
+        $('table tr td a[href*=visainformation]').each(function (index, item) {
+            var countryName = $.trim($(item).html());
+            oCountries.push(countryName);
+        });
+
+        Global.doAjaxPost('api/Countries', JSON.stringify(oCountries));
+    }
+
+</script>
+
+
+
+
+<div class="list-group">
+    <a href="/DataTables/Basic" class="list-group-item">
+        <h4 class="list-group-item-heading">Paginação e filtro global</h4>
+        <p class="list-group-item-text">
+            Neste exemplo, todo o processamento de paginação e carga de dados é efetuado pelo servidor, e controlado pelo plugion DataTables.
+            <br />
+            MVC 4, Web Api, jQuery, DataTables e Ajax.
+        </p>
+    </a>
+    <a href="/DataTables/Sorting" class="list-group-item">
+        <h4 class="list-group-item-heading">Paginação, filtro e ordenação dinâmica</h4>
+        <p class="list-group-item-text">
+            Exemplo parecido com o anterior, porém com a adição da funcionalidade de ordenação pelas colunas, também direto pelo servidor.
+            <br />
+            MVC 4, Web Api, jQuery, DataTables e Ajax.
+        </p>
+    </a>
+    <a href="/DataTables/Filtering" class="list-group-item">
+        <h4 class="list-group-item-heading">Paginação, filtro, ordenação dinâmica e filtro em colunas</h4>
+        <p class="list-group-item-text">
+            Exemplo parecido com o anterior, porém com a possibilidade de filtrar pelas colunas, além da busca global.
+            <br />
+            MVC 4, Web Api, jQuery, DataTables e Ajax.
+        </p>
+    </a>
+</div>

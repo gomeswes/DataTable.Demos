@@ -14,7 +14,8 @@ namespace DataTable.Demos.Site
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-1.11.2.min.js", 
                         "~/Scripts/bootstrap.min.js",
-                        "~/Scripts/jquery.dataTables.min.js"));
+                        "~/Scripts/jquery.dataTables.min.js",
+                        "~/Scripts/Global.js"));
 
             //bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
             //            "~/Scripts/jquery-ui-{version}.js"));

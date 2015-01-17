@@ -17,19 +17,16 @@ namespace DataTable.Demos.Site.Models
         public string Name { get; set; }
         public string MailAddress { get; set; }
         public string Country { get; set; }
-        public string Company { get; set; }
         public DateTime Aniversary { get; set; }
-        public Char Gender { get; set; }
+        public string Gender { get; set; }
 
 
-        public static IList<Guest> GetGuests(int amount, int startingPoint)
+
+        public static int CountTotalGuests() 
         {
-            var guests = new List<Guest>();
-            for (var i = startingPoint; i < amount; i++)
-            {
-                guests.Add(new Guest(RandomInfoGenerator.GenerateRandomName(i), "unkonwn-1@wgomes.net"));
-            }
-            return guests;
+            var maxGuests = 500000;
+            return maxGuests;
         }
+                
     }
 }

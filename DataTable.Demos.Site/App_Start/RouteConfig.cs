@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataTable.Demos.Site.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,8 +17,12 @@ namespace DataTable.Demos.Site
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "DataTables", action = "Index", id = UrlParameter.Optional }
             );
+            //);.RouteHandler = new SessionableStateRouteHandler(); // Config to access session from inside a WebApi method
+
         }
     }
+
+  
 }
