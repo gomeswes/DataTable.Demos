@@ -78,6 +78,25 @@
         }).on('change', function () {
             doColumnSearch($(this).val(), $(this).attr('col-idx'));
         });
+        $('input.typeahead').typeahead({
+            hint: true,
+            minLength: 1,
+            ajax: {
+                url: "/api/Countries",
+                //displayField: "value",
+                triggerLength: 1,
+                method: "GET",
+                loadingClass: "loading-circle",
+                preDispatch: function (query) {
+                    return {
+                            search: query
+                    }
+                },
+                preProcess: function (data) {
+                    return data;
+                }
+            }
+        });
 
     });
 
@@ -115,7 +134,7 @@
                     <input type='text' col-idx='1' class='form-control' placeholder='Buscar por E-mail' />
                 </th>
                 <th>
-                    <input type='text' col-idx='2' class='form-control' placeholder='Buscar por País' />
+                    <input type='text' col-idx='2' class='form-control typeahead' placeholder='Buscar por País' />
                 </th>
                 <th>
                     <div class="input-group date">

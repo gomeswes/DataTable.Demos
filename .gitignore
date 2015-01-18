@@ -42,3 +42,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.suo
+*.dll
+*.dll
+*.suo
+*.pdb
+DataTable.Demos.Site/obj/Debug/DataTable.Demos.Site.csproj.FileListAbsolute.txt

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using DataTable.Demos.Site.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Web;
 using System.Web.Http;
 
 namespace DataTable.Demos.Site.WebServices
@@ -12,9 +14,14 @@ namespace DataTable.Demos.Site.WebServices
     public class CountriesController : ApiController
     {
         // GET api/<controller>
+        [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            var keySearch = HttpContext.Current.Request.QueryString["search"];
+            if (!string.IsNullOrEmpty(keySearch))
+                return RandomInfoSources.COUNTRIES.Where(c => c.ToLower().Contains(keySearch.ToLower())).ToArray<string>();
+
+            return RandomInfoSources.COUNTRIES;
         }
 
         // GET api/<controller>/5

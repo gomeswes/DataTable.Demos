@@ -16,7 +16,9 @@ namespace DataTable.Demos.Site
                         "~/Scripts/bootstrap.min.js",
                         "~/Scripts/jquery.dataTables.min.js",
                         "~/Scripts/dropdown.js",
+                        "~/Scripts/bootstrap-typeahead.min.js",
                         "~/Scripts/bootstrap-datepicker.js",
+
                         "~/Scripts/Global.js"));
 
             //bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
