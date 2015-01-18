@@ -23,7 +23,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/17/2015 11:45:09</publishTime>
     </File>
     <File Include="bin/DataTable.Demos.Site.dll">
-      <publishTime>01/18/2015 14:11:10</publishTime>
+      <publishTime>01/18/2015 17:02:41</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>01/17/2015 11:45:07</publishTime>
@@ -128,37 +128,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/17/2015 11:45:08</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Spatial.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:08</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Web.Http.OData.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Web.Http.WebHost.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:06</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>01/17/2015 11:45:07</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
       <publishTime>01/17/2015 11:45:07</publishTime>
@@ -167,7 +167,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/17/2015 11:45:09</publishTime>
     </File>
     <File Include="bin/WebMatrix.Data.dll">
-      <publishTime>07/09/2013 10:05:10</publishTime>
+      <publishTime>09/07/2013 10:05:10</publishTime>
     </File>
     <File Include="bin/WebMatrix.WebData.dll">
       <publishTime>01/17/2015 11:45:07</publishTime>
@@ -322,11 +322,23 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Images/orderedList9.png">
       <publishTime>01/17/2015 11:45:05</publishTime>
     </File>
+    <File Include="Images/sort_asc.png">
+      <publishTime>01/18/2015 15:00:15</publishTime>
+    </File>
+    <File Include="Images/sort_both.png">
+      <publishTime>01/18/2015 15:00:34</publishTime>
+    </File>
+    <File Include="Images/sort_desc.png">
+      <publishTime>01/18/2015 15:00:24</publishTime>
+    </File>
     <File Include="packages.config">
       <publishTime>01/17/2015 11:45:06</publishTime>
     </File>
     <File Include="Scripts/bootstrap-datepicker.js">
       <publishTime>12/17/2014 13:11:06</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-typeahead.min.js">
+      <publishTime>01/17/2015 05:45:54</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>01/17/2015 11:45:05</publishTime>
@@ -335,7 +347,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/17/2015 11:45:05</publishTime>
     </File>
     <File Include="Scripts/dropdown.js">
-      <publishTime>11/12/2014 09:03:16</publishTime>
+      <publishTime>12/11/2014 09:03:16</publishTime>
     </File>
     <File Include="Scripts/Global.js">
       <publishTime>01/17/2015 15:10:44</publishTime>
@@ -365,13 +377,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/17/2015 11:45:05</publishTime>
     </File>
     <File Include="Views/DataTables/Basic.cshtml">
-      <publishTime>01/18/2015 14:10:59</publishTime>
+      <publishTime>01/18/2015 14:55:40</publishTime>
     </File>
     <File Include="Views/DataTables/Filtering.cshtml">
-      <publishTime>01/18/2015 14:10:32</publishTime>
+      <publishTime>01/18/2015 16:38:18</publishTime>
     </File>
     <File Include="Views/DataTables/Index.cshtml">
-      <publishTime>01/17/2015 21:11:48</publishTime>
+      <publishTime>01/18/2015 16:55:54</publishTime>
     </File>
     <File Include="Views/DataTables/Sorting.cshtml">
       <publishTime>01/17/2015 21:04:37</publishTime>
@@ -401,7 +413,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/17/2015 11:45:05</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/17/2015 21:28:33</publishTime>
+      <publishTime>01/18/2015 17:02:47</publishTime>
     </File>
   </ItemGroup>
 </Project>
