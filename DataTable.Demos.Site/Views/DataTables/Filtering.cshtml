@@ -30,7 +30,7 @@
         dtFiltering.getTableElement().DataTable({
             "serverSide": true,
             "processing": true,
-            "bSort": false,
+            "bSort": true,
             "sAjaxSource": "/api/Guest",
             "columns": [
                     { "data": "Name" },
@@ -38,6 +38,9 @@
                     { "data": "Country" },
                     { "data": "Anniversary" },
                     { "data": "Gender" }],
+            "language": {
+                    'url': "/api/Localization"
+            },
             "fnServerData": function (sSource, aoData, fnCallback) {
                 $.ajax({
                     type: "GET",

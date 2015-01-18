@@ -15,9 +15,14 @@ namespace DataTable.Demos.Site.Models.Repositories
 
         public IList<Guest> GetGuests(GuestFilter guestFilter)
         {
-            return GetGuestsIEnumerable(guestFilter)
-                        .OrderBy(p => p.Name)
-                        .Skip(guestFilter.DisplayStart)
+            var query = GetGuestsIEnumerable(guestFilter);
+            
+            if (guestFilter.SortDirection == SortDirection.Desc)
+                query = query.OrderByDescending(guest => guestFilter.GetSortingProp(guest));
+            else
+                query = query.OrderBy(guest => guestFilter.GetSortingProp(guest));
+
+            return query.Skip(guestFilter.DisplayStart)
                         .Take(guestFilter.DisplayLength)
                         .ToList<Guest>();
         }
@@ -63,7 +68,7 @@ namespace DataTable.Demos.Site.Models.Repositories
             }
 
             if (guestFilter.IsGenderSearch()) {
-                query = query.Where(guest => guest.Gender != null && guest.Gender.ToLower().Contains(guestFilter.Gender));
+                query = query.Where(guest => guest.Gender != null && guest.Gender.Equals(guestFilter.Gender, StringComparison.CurrentCultureIgnoreCase));
             }
 
             return query;

@@ -199,6 +199,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebServices\CountriesController.cs" />
     <Compile Include="WebServices\GuestController.cs" />
+    <Compile Include="WebServices\LocalizationController.cs" />
     <Compile Include="WebServices\NamesController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +231,9 @@
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\sort_asc.png" />
+    <Content Include="Images\sort_both.png" />
+    <Content Include="Images\sort_desc.png" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

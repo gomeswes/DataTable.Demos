@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using DataTable.Demos.Site.Models.Extensions;
+using System.Reflection;
 
 namespace DataTable.Demos.Site.Models.Filters
 {
@@ -107,5 +108,40 @@ namespace DataTable.Demos.Site.Models.Filters
         {
             return !string.IsNullOrEmpty(GlobalSearch.TrimToLower());
         }
+
+        private string[] cols = new string[] { "Name", "MailAddress", "Country", "Anniversary", "Gender" };
+        private int sortIndex;
+        public SortDirection SortDirection;
+        public void SetSortingCol(string colIndex)
+        {
+            
+            int iColIndex;
+            int.TryParse(colIndex, out iColIndex);
+            if (iColIndex > cols.Length - 1)
+                iColIndex = 0;
+            sortIndex = iColIndex;
+        }
+        public object GetSortingProp(Guest guest)
+        {
+            PropertyInfo property = guest.GetType().GetProperties().FirstOrDefault(prop => prop.Name == cols[sortIndex]);
+            return property.GetValue(guest, null);
+        }
+        public void SetSortingDir(string dir)
+        {
+            if (!string.IsNullOrEmpty(dir) && dir.Equals("desc", StringComparison.CurrentCultureIgnoreCase))
+            {
+                SortDirection = SortDirection.Desc;
+            }
+            else
+            {
+                SortDirection = SortDirection.Asc;
+            }
+
+        }
+        
+    }
+    public enum SortDirection
+    {
+        Asc, Desc
     }
 }

@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\FiltersTests.cs" />
     <Compile Include="Model\GuestTests.cs" />
     <Compile Include="Model\ServicesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

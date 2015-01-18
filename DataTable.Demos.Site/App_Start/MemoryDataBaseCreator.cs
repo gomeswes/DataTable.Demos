@@ -13,7 +13,7 @@ namespace DataTable.Demos.Site.App_Start
         public static void CreateGuestsCache()
         {
             //Guests = GuestCreator.Create(211991);
-            Guests = GuestCreator.Create(1000);
+            Guests = GuestCreator.Create(10000);
         }
     }
 

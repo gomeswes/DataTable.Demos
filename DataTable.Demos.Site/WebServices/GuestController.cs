@@ -34,6 +34,8 @@ namespace DataTable.Demos.Site.WebServices
             guestFilter.Country = HttpContext.Current.Request["sSearch_2"];
             guestFilter.SetAnniversary(HttpContext.Current.Request["sSearch_3"]);
             guestFilter.Gender = HttpContext.Current.Request["sSearch_4"];
+            guestFilter.SetSortingCol(HttpContext.Current.Request["iSortCol_0"]);
+            guestFilter.SetSortingDir(HttpContext.Current.Request["sSortDir_0"]);
 
             var guestRepository = new GuestRepository(DataCache.Guests);
             var data = guestRepository.GetGuests(guestFilter).Select(g => new { 
