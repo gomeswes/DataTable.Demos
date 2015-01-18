@@ -12,7 +12,8 @@ namespace DataTable.Demos.Site.App_Start
         public static IList<Guest> Guests { get; private set; }
         public static void CreateGuestsCache()
         {
-            Guests = GuestCreator.Create(211991);
+            //Guests = GuestCreator.Create(211991);
+            Guests = GuestCreator.Create(1000);
         }
     }
 

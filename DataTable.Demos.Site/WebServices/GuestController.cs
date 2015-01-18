@@ -1,5 +1,6 @@
 ﻿using DataTable.Demos.Site.App_Start;
 using DataTable.Demos.Site.Models;
+using DataTable.Demos.Site.Models.Filters;
 using DataTable.Demos.Site.Models.Repositories;
 using System;
 using System.Collections.Generic;
@@ -14,30 +15,40 @@ namespace DataTable.Demos.Site.WebServices
 {
     public class GuestController : ApiController
     {
+
+
+
         // GET api/<controller>
         [HttpGet]
         public dynamic Get()
         {
             var echo = HttpContext.Current.Request.Params["sEcho"];
             var totalRecords = Convert.ToInt32(HttpContext.Current.Request.Params["iTotalRecords"]);
-            var displayLength = Convert.ToInt32(HttpContext.Current.Request["iDisplayLength"]);
-            var displayStart = Convert.ToInt32(HttpContext.Current.Request["iDisplayStart"]);
-            var globalSearch = HttpContext.Current.Request.Params["sSearch"];
+            var guestFilter = new GuestFilter();
+
+            guestFilter.DisplayLength = Convert.ToInt32(HttpContext.Current.Request["iDisplayLength"]);
+            guestFilter.DisplayStart = Convert.ToInt32(HttpContext.Current.Request["iDisplayStart"]);
+            guestFilter.GlobalSearch = HttpContext.Current.Request.Params["sSearch"];
+            guestFilter.Name = HttpContext.Current.Request["sSearch_0"];
+            guestFilter.MailAddress = HttpContext.Current.Request["sSearch_1"];
+            guestFilter.Country = HttpContext.Current.Request["sSearch_2"];
+            guestFilter.SetAnniversary(HttpContext.Current.Request["sSearch_3"]);
+            guestFilter.Gender = HttpContext.Current.Request["sSearch_4"];
 
             var guestRepository = new GuestRepository(DataCache.Guests);
-
-            return new
-            {
-                sEcho = echo,
-                iTotalRecords = guestRepository.CountTotalGuests(),
-                iTotalDisplayRecords = guestRepository.CountWithFilter(globalSearch),
-                aaData = guestRepository.GetGuests(displayLength, displayStart, globalSearch).Select(g => new { 
+            var data = guestRepository.GetGuests(guestFilter).Select(g => new { 
                     g.Name,
                     g.MailAddress,
                     g.Country,
                     Anniversary = g.Anniversary.ToString("dd/MM/yyyy"),
                     g.Gender
-                }).ToList()
+                }).ToList();
+            return new
+            {
+                sEcho = echo,
+                iTotalRecords = guestRepository.CountTotalGuests(),
+                iTotalDisplayRecords = guestRepository.CountWithFilter(guestFilter),
+                aaData = data
             };
         }
 

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace DataTable.Demos.Site.Models
 {
-    public class Guest
+    public class Guest : IEquatable<Guest>
     {
         public Guest(string name, string mailAddress)
         {
@@ -31,6 +31,11 @@ namespace DataTable.Demos.Site.Models
             var maxGuests = 500000;
             return maxGuests;
         }
-                
+
+
+        public bool Equals(Guest other)
+        {
+            return other != null && other.MailAddress.Equals(MailAddress);
+        }
     }
 }

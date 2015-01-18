@@ -15,6 +15,8 @@ namespace DataTable.Demos.Site
                         "~/Scripts/jquery-1.11.2.min.js", 
                         "~/Scripts/bootstrap.min.js",
                         "~/Scripts/jquery.dataTables.min.js",
+                        "~/Scripts/dropdown.js",
+                        "~/Scripts/bootstrap-datepicker.js",
                         "~/Scripts/Global.js"));
 
             //bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
@@ -33,9 +35,10 @@ namespace DataTable.Demos.Site
 
             bundles.Add(new StyleBundle("~/Content/css")
                 .Include("~/Content/bootstrap.min.css",
-                        "~/Content/Site.css",
+                        "~/Content/datepicker3.css",
                         "~/Content/jquery.dataTables.min.css",
-                        "~/Content/bootstrap-theme.min.css"));
+                        "~/Content/bootstrap-theme.min.css",
+                        "~/Content/Site.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css"));
 

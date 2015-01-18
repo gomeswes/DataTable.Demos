@@ -27,6 +27,9 @@ namespace DataTable.Demos.Model.Tests.Model
             {
                 names.Add(RandomInfoGenerator.GenerateRandomName(i));
             }
+
+            var dis = names.ToArray().Distinct();
+
             Assert.AreEqual(expectedCount, names.Count);
         }
 

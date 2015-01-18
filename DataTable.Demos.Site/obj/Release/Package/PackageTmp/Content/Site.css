@@ -754,3 +754,15 @@ tr.pager td {
             margin: 0;
         }
 }
+
+#filtering tfoot th {
+    padding: 10px 18px 6px 1px;
+}
+
+.dropDown{
+    margin-top: 3%
+}
+
+.day, .dow, .datepicker-switch{
+    cursor: pointer;
+}
